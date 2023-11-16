@@ -1,21 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiOutlineMenu, AiOutlineCloseCircle } from "react-icons/ai";
 
-const MobileNav = () => {
+const MobileNav = ({showMenu, isMenuOpen}) => {
+
   const sidebarStyle =
     "py-4 hover:text-lg transition-all duration-500 px-4 font-semibold";
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const showMenu = () => {
-    if (isMenuOpen === true) {
-      setIsMenuOpen(false);
-    } else {
-      setIsMenuOpen(true);
-    }
-  };
+  
   return (
-    <div className="z-20">
+    <div className="z-20 ">
       <div
         className="cursor-pointer"
         onClick={() => {
@@ -27,10 +20,10 @@ const MobileNav = () => {
 
       <div
         className={`fixed right-0 top-0 bg-slate-500 ${
-          !isMenuOpen ? "translate-y-[-30vw]" : " translate-y-[0vw] "
-        } w-[100vw] h-[15vh] text-white transition-all duration-1000 flex justify-between items-center pb-4 z-10 pt-1 pr-1`}
+          !isMenuOpen ? "translate-x-[100vw]" : " max-[475px]:translate-x-[65vw] translate-x-[70vw] "
+        } w-[100vw] xs:pl-4 h-[70vh] text-white transition-all duration-1000 flex flex-col justify-between items-start pb-4 z-10 pt-1 pr-1 rounded-b-lg`}
       >
-        <ul className="flex items-center gap-1 ml-2 uppercase w-full">
+        <ul className="flex flex-col items-start gap-1 ml-2 uppercase w-full ">
           <li className={sidebarStyle}>
             <a href="#services">Services</a>
           </li>
@@ -47,7 +40,7 @@ const MobileNav = () => {
             <a href="#contact">Contact Us</a>
           </li>
         </ul>
-        <div className="cursor-pointer block p-3 text-white hover:h-12 hover:w-12">
+        <div className="cursor-pointer block p-3 text-white hover:h-12 hover:w-12 ml-10">
           <AiOutlineCloseCircle
             className="h-full w-full"
             onClick={() => {

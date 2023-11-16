@@ -7,7 +7,7 @@ import "./project.css";
 
 import { projects } from "../assets/data";
 
-const Projects = () => {
+const Projects = ({showMenu, isMenuOpen}) => {
   const NextArrow = ({ onClick }) => {
     return (
       <div onClick={onClick} className="arrow next">
@@ -40,7 +40,14 @@ const Projects = () => {
   // const cardStyle =
   //   "w-[45vw] md:w-[27vw] h-[35vw] md:h-[20vw] md:gap-5 shadow-md shadow-slate-800 rounded-md mt-10 hover:w-[50vw] hover:md:w-[30vw] hover:h-[40vw] hover:md:h-[25vw] transition-all duration-500 -z-0";
   return (
-    <div id="projects" className="h-screen md:h-auto">
+    <div
+      id="projects"
+      className="md:h-auto"
+      onClick={() => {
+        if(isMenuOpen)
+        showMenu();
+      }}
+    >
       <div>
         <hr className="bg-slate-500 h-1" />
       </div>
@@ -51,6 +58,7 @@ const Projects = () => {
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div
+                key={index}
                 className={index === imageIndex ? "activeSlide slide" : "slide"}
               >
                 <img

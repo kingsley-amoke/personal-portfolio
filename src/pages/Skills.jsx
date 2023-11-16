@@ -14,11 +14,18 @@ import {
 } from "react-icons/bi";
 import { TbBrandDjango } from "react-icons/tb";
 
-const Skills = () => {
+const Skills = ({ showMenu, isMenuOpen }) => {
   const cardStyle =
-    "w-[50vw] md:w-[25vw] h-[25vw] md:h-[15vw] shadow-md shadow-slate-800 rounded-md mt-10 hover:w-[52vw] hover:md:w-[27vw] hover:h-[27vw] hover:md:h-[17vw] transition-all duration-500";
+    "w-[50vw] md:w-[25vw] h-[25vw] md:h-[15vw] shadow-md shadow-slate-800 rounded-md mt-10 hover:w-[52vw] hover:md:w-[27vw] hover:h-[27vw] hover:md:h-[17vw] transition-all duration-500 overflow-scroll";
   return (
-    <div className="bg-gray-200" id="skills">
+    <div
+      className="bg-gray-200"
+      id="skills"
+      onClick={() => {
+        if(isMenuOpen)
+        showMenu();
+      }}
+    >
       <div>
         <hr className="bg-slate-500 h-1" />
       </div>

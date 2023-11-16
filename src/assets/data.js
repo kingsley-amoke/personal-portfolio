@@ -17,7 +17,7 @@ export const projects = [
     title: "My Quick Weather",
     image:
       "https://cdn.sanity.io/images/3gcu61oe/production/b7903e9601d8bab2285239f49a816cab0e58990a-832x1006.png",
-    github: "https://github.com/kingsley-amoke/myquickweather",
+    github: "https://github.com/kingsley-amoke/personal-portfolio",
     url: "https://myquickweather.netlify.app",
   },
   {

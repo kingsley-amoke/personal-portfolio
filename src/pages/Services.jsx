@@ -1,11 +1,18 @@
 import React from "react";
 import service from "../assets/services.jpeg";
 
-const Services = () => {
+const Services = ({ showMenu, isMenuOpen }) => {
   const cardStyle =
     "w-[50vw] md:w-[25vw] h-[25vw] md:h-[15vw] shadow-md shadow-slate-800 rounded-md mt-10 hover:w-[52vw] hover:md:w-[27vw] hover:h-[27vw] hover:md:h-[17vw] transition-all duration-500 pt-4 px-4 pb-2";
   return (
-    <div className="bg-gray-200" id="services">
+    <div
+      className="bg-gray-200"
+      id="services"
+      onClick={() => {
+        if(isMenuOpen)
+        showMenu();
+      }}
+    >
       <div>
         <hr className="bg-slate-500 h-1" />
       </div>
@@ -19,11 +26,11 @@ const Services = () => {
         </div>
         <div className="flex flex-wrap justify-center items-center gap-5">
           <div className={`${cardStyle}`}>
-            <div>
-              <h2 className="text-blue-900 font-semibold pb-1">
-                Front-End Development:
+            <div className="flex md:block justify-center items-center">
+              <h2 className="text-blue-900 font-semibold pb-1 text-2xl md:text-lg mt-5 md:mt-0">
+                Front-End Development
               </h2>
-              <div className="text-sm">
+              <div className="hidden md:block text-sm">
                 I specialize in designing and coding the user interface (UI) and
                 user Experience (UX) of websites, ensuring that they are
                 visually appealing and user friendly.
@@ -31,11 +38,11 @@ const Services = () => {
             </div>
           </div>
           <div className={`${cardStyle}`}>
-            <div>
-              <h2 className="text-blue-900 font-semibold pb-1">
-                Back-End Development:
+            <div className="flex md:block justify-center items-center">
+              <h2 className="text-blue-900 font-semibold pb-1 text-2xl md:text-lg mt-5 md:mt-0">
+                Back-End Development
               </h2>
-              <div className="text-sm">
+              <div className="hidden md:block text-sm">
                 I build and maintain the server-side logic, database and
                 application functionality, ensuring data security and
                 efficiency.
@@ -43,11 +50,11 @@ const Services = () => {
             </div>
           </div>
           <div className={`${cardStyle}`}>
-            <div>
-              <h2 className="text-blue-900 font-semibold pb-1">
-                Database MAnagement:
+            <div className="flex md:block justify-center items-center">
+              <h2 className="text-blue-900 font-semibold pb-1 text-2xl md:text-lg mt-5 md:mt-0">
+                Database Management
               </h2>
-              <div className="text-sm">
+              <div className="hidden md:block text-sm">
                 I handle database design, optimization and management.
               </div>
             </div>

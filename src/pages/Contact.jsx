@@ -4,11 +4,18 @@ import Footer from "../components/Footer";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const Contact = () => {
+const Contact = ({ showMenu, isMenuOpen }) => {
   const inputStyle =
     "ml-4 bg-gray-100 border rounded-md shadow shadow-slate-400 w-full outline-none px-4 py-1 placeholder-gray-300";
   return (
-    <div className="bg-gray-200" id="contact">
+    <div
+      className="bg-gray-200"
+      id="contact"
+      onClick={() => {
+        if(isMenuOpen)
+        showMenu();
+      }}
+    >
       <div className=" bg-slate-500 h-1 z-0">
         <hr />
       </div>

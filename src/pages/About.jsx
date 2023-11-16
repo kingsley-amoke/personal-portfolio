@@ -1,10 +1,14 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
-const About = () => {
+const About = ({ showMenu, isMenuOpen }) => {
   return (
-    <div className="bg-gray-200" id="about">
+    <div
+      className="bg-gray-200"
+      id="about"
+      onClick={() => {
+        if (isMenuOpen) showMenu();
+      }}
+    >
       <div>
         <hr className="bg-slate-500 h-1" />
       </div>

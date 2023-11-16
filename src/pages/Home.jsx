@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "./Contact";
@@ -19,14 +19,30 @@ import profile from "../assets/profile-photo.jpg";
 import resume from "../assets/Amoke.pdf";
 
 const Home = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const showMenu = () => {
+    if (isMenuOpen === true) {
+      setIsMenuOpen(false);
+    } else {
+      setIsMenuOpen(true);
+    }
+  };
+
   const buttonStyle =
     "flex justify-between gap-2 items-center rounded-xl py-1 px-2 hover:px-3 hover:bg-gray-100 hover:shadow-lg hover:shadow-slate-600 trasition-all duration-500";
   return (
     <div className="bg-gray-200">
       <div className="sticky">
-        <Header />
+        <Header showMenu={showMenu} isMenuOpen={isMenuOpen} />
       </div>
-      <div className="flex flex-col-reverse md:flex-row gap-12 justify-center items-center pb-10">
+      <div
+        className="flex flex-col-reverse md:flex-row gap-12 justify-center items-center pb-10"
+        onClick={() => {
+          if(isMenuOpen)
+          showMenu();
+        }}
+      >
         <div>
           <div className="font-bold">
             <p>Welcome to my portfolio,</p>
@@ -165,11 +181,11 @@ const Home = () => {
           />
         </div>
       </div>
-      <Services />
-      <Projects />
-      <Skills />
-      <About />
-      <Contact />
+      <Services showMenu={showMenu} isMenuOpen={isMenuOpen} />
+      <Projects showMenu={showMenu} isMenuOpen={isMenuOpen} />
+      <Skills showMenu={showMenu} isMenuOpen={isMenuOpen} />
+      <About showMenu={showMenu} isMenuOpen={isMenuOpen} />
+      <Contact showMenu={showMenu} isMenuOpen={isMenuOpen} />
       <div>
         <Footer />
       </div>
