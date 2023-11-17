@@ -20,8 +20,10 @@ const MobileNav = ({showMenu, isMenuOpen}) => {
 
       <div
         className={`fixed right-0 top-0 bg-slate-500 ${
-          !isMenuOpen ? "translate-x-[100vw]" : " max-[475px]:translate-x-[65vw] translate-x-[70vw] "
-        } w-[100vw] xs:pl-4 h-[70vh] text-white transition-all duration-1000 flex flex-col justify-between items-start pb-4 z-10 pt-1 pr-1 rounded-b-lg`}
+          !isMenuOpen
+            ? "translate-x-[100vw]"
+            : " max-[475px]:translate-x-[65vw] translate-x-[70vw] "
+        } w-[100vw] xs:pl-4 h-[100vh] text-white transition-all duration-1000 flex flex-col justify-between items-start pb-4 z-10 pt-1 pr-1 rounded-b-lg`}
       >
         <ul className="flex flex-col items-start gap-1 ml-2 uppercase w-full ">
           <li className={sidebarStyle}>

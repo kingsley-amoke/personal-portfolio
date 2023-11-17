@@ -8,25 +8,25 @@ const Footer = () => {
         <ul className="flex w-full gap-9">
           <div className="flex md:justify-evenly items-center gap-9 md:w-full">
             <li>
-              <a href="#" className="text-blue-900 font-semibold">
+              <a href="/terms-of-service" className="text-blue-900 font-semibold">
                 Terms of Service
               </a>
             </li>
             <li className="hidden md:block">
               &copy; {year} Portfolio - Developed By{" "} 
-              <a href="#" className="text-blue-900 font-semibold">
+              <a href="/" className="text-blue-900 font-semibold">
                 Kingsley
               </a>
             </li>
             <li>
-              <a href="#" className="text-blue-900 font-semibold">
+              <a href="/privacy-policy" className="text-blue-900 font-semibold">
                 Privacy Policy
               </a>
             </li>
           </div>
           <li className="md:hidden">
             &copy; {year} Developed By{" "}
-            <a href="#" className="text-blue-900 font-semibold">
+            <a href="/" className="text-blue-900 font-semibold">
               Kingsley
             </a>
           </li>
