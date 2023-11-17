@@ -27,4 +27,11 @@ export const projects = [
     github: "https://github.com/kingsley-amoke/myquickweather",
     url: "https://kingsleyamoke.netlify.app",
   },
+  {
+    title: "Sunnyside Challengr",
+    image:
+      "https://cdn.sanity.io/images/3gcu61oe/production/e3a7e8f040de35fcc840952541be21a67aa1217c-1150x916.png",
+    github: "https://github.com/kingsley-amoke/myquickweather",
+    url: "https://mysunnysidechallenge.netlify.app",
+  },
 ];
